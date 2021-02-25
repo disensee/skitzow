@@ -34,23 +34,11 @@ nav {
     justify-content: center;
     flex-direction: row;
     margin: 0 auto;
-    /* max-width: 1280px; */
 }
-
 
 .plyr{
     border-radius: 10px;
 }
-
-/*
-div.plyr__video-embed {
-    border-radius: 7px;
-}
-
-div.plyr__video-embed > iframe {
-    border-radius: 7px;
-} */
-
 
 .video-nav-container {
     display: flex;
