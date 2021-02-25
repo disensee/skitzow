@@ -16,7 +16,7 @@
     <body>
         <header>  
             <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
+                <div class="container-fluid custom-nav">
                     <a class="navbar-brand"><h1 id="nav-title" class="heading-1">skitzrow</h1></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_dropdown" aria-controls="navbar_dropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -33,17 +33,27 @@
         <main>
             <section id="video_section">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div id="btnPrevContainer" class="video-nav col-sm-2 col-md-2 col-lg-2 order-first">
-                            <pre id="btnPrev"><</pre>
+                    <div id="player-container">
+                        <div class="plyr__video-embed" id="player">
+                            <iframe
+                                id="frame"
+                                src="https://www.youtube.com/embed/HMfRz-niVME"
+                                allowfullscreen
+                                allowtransparency
+                                allow="autoplay"
+                                crossorigin
+                            ></iframe>
+                            </div>
+                        <!-- <video id="player">
+                            <source src="https://cdn.plyr.io/static/blank.mp4" title="The Storm" type="video/mp4"/>
+                        </video>   -->
+                    </div>
+                    <div class='video-nav-container'>
+                        <div id="btnPrevContainer" class="video-nav order-first">
+                            <span id="btnPrev" class="video-nav-button far fa-arrow-alt-circle-left fa-2x"></span>
                         </div>
-                        <div id="player-container" class="col-sm-8 col-md-8 col-lg-8">
-                            <video id="player">
-                                <source src="https://cdn.plyr.io/static/blank.mp4" title="The Storm" type="video/mp4"/>
-                            </video>  
-                        </div>
-                        <div id="btnNextContainer" class="video-nav col-sm-2 col-md-2 col-lg-2 order-last">
-                            <pre id="btnNext">></pre>
+                        <div id="btnNextContainer" class="video-nav order-last">
+                            <span id="btnNext" class="video-nav-button far fa-arrow-alt-circle-right fa-2x"></span>
                         </div>
                     </div>
                 </div>
@@ -61,7 +71,7 @@
 
         <footer>
             <div class="spot-follow">
-                <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:1qdF9qh3gf8fmMFgaXaGO7&size=basic&theme=dark&show-count=0" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:1qdF9qh3gf8fmMFgaXaGO7&size=basic&theme=dark&show-count=0" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true" crossorigin></iframe>
             </div>
             
             <div class="icons">
