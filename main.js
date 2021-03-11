@@ -1,3 +1,9 @@
+if (location.protocol !== 'https:') {
+    if(location.protocol !== 'file:'){
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+}
+
 window.addEventListener('load', ()=>{
     //Video YouTube src URLs
     const videos = ["https://www.youtube.com/embed/HMfRz-niVME" ,"https://www.youtube.com/embed/AyUyBYKExpg", "https://www.youtube.com/embed/z6Y962vX8do", "https://www.youtube.com/embed/L0HL_Lfgo40"];
@@ -5,11 +11,13 @@ window.addEventListener('load', ()=>{
 
     //Plyr constructor
     const player = new Plyr('#player', {
-        controls: ['play', 'progress','mute','volume', 'airplay', 'settings','fullscreen'],
+        controls: ['play-large', 'play', 'progress','mute','volume', 'airplay', 'settings','fullscreen'],
+        fullscreen: {enabled: true, fallback: true, iosNative: true, container: '#player'}
     });
 
     document.getElementById("btnPrev").addEventListener("click", goToPrev);
     document.getElementById("btnNext").addEventListener("click", goToNext);
+
 
     ////////////////////////////////////////
     ////////////VIDEO FUNCTIONS////////////
