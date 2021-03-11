@@ -12,7 +12,7 @@ window.addEventListener('load', ()=>{
     //Plyr constructor
     const player = new Plyr('#player', {
         controls: ['play-large', 'play', 'progress','mute','volume', 'airplay', 'settings','fullscreen'],
-        fullscreen: {enabled: true, fallback: true, iosNative: true, container: '#player'}
+        fullscreen: {enabled: true, fallback: true, iosNative: false}
     });
 
     document.getElementById("btnPrev").addEventListener("click", goToPrev);

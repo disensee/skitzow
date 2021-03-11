@@ -90,6 +90,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 div.icons span.fab, div.video-nav span.video-nav-button, .modal-content a{
