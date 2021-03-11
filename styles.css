@@ -55,6 +55,17 @@ nav {
     font-size: 2em;
 }
 
+.modal-header, .modal-body {
+    background-color: #111;
+    border: none;
+    color: #DDD;
+    text-align: center;
+}
+
+.modal-content {
+    border-radius: 7px;
+}
+
 
 footer {
     align-items: center;
